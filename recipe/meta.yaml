@@ -1,5 +1,5 @@
 {% set name = "appose" %}
-{% set version = "0.1.0" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0a06cc32d225634b2a68ed7d900e515c3d4027cde8f8bf205414412b9083978e
+  sha256: 6a6458843f19dd84c5680e525601118566e51383046225e4a7e0a1d5fcd3312f
 
 build:
   noarch: python
