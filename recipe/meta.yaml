@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "appose" %}
 {% set version = "0.2.0" %}
 
@@ -6,23 +7,25 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 6a6458843f19dd84c5680e525601118566e51383046225e4a7e0a1d5fcd3312f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vvv --no-deps
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools >=61.2
     - pip
   run:
-    - python >=3.10
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - appose
 
