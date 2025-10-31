@@ -1,6 +1,6 @@
 {% set python_min = "3.9" %}
 {% set name = "appose" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c89e6ff00e8ed1e7f95bb191d951352f79b67f4770896a00901a69c4c64a8d82
+  sha256: e423b513ed0b8796edc8e575580a35f42f72b714b8b3e367546b80f37cef8628
 
 build:
   noarch: python
